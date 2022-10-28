@@ -1,61 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html{
-    scroll-behavior: smooth;
-}
+
 
 header{
     height: 80px;
     width: 100%;
     background-color: #222;
-    font-size: 24px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: #fff;
+   
+    font-family: Arial, Helvetica, sans-serif;
     padding: 20px;
-    text-transform: capitalize;
+    text-decoration: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(2,40px);
+    gap: 7px;
+    padding: 4px;
+    
+    
+  
 }
 
 .logo{
-    float: left;
+    color: #fff;
+    grid-column: 2/5;
+    grid-row: 1;
+    text-align: center;
+    margin-top: 4px;
+    font-size: 20px;
 }
 
 .logo span{
-    color:rgb(253, 251, 251);  
+    color: rgb(255, 255, 254); 
+    font-size: 24px; 
 }
-
-.barra{
-    float: right;
-    letter-spacing: 0.5px;
-    
-}
-
-.barra ul{
-    list-style: none;
-}
-.barra ul li{
-    display: inline-block;
-    padding-left: 20px;
-}
-.barra a{
+.menu {
     text-decoration: none;
     color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 16px;
+
 }
 
-.barra a:hover{
-    color: #fff;
-    text-shadow: 0 0 10px;    
+.menu1{
+    grid-column: 1/2;
+    grid-row: 2;
+}
+.menu2{
+    grid-column: 2/3;
+    grid-row: 2;
+}
+.menu3{
+    grid-column: 3/4;
+    grid-row: 2;
+}
+.menu4{
+    grid-column: 4/5;
+    grid-row: 2;
+}
+.menu5{
+    grid-column: 5/6;
+    grid-row: 2;
 }
 
 .main_index{
-    height:calc(100vh - 80px);
-    width:100%;
-    background-image: url(img/aspen-snowmass_8.jpg);
+    height: 100vh;
+    width: 100%;
+    background-image: url(img/snow\ main.jpg);
     background-size: cover;
-    background-position: center;    
+    background-position: center;
 }
 .call{
     color: #fff;
@@ -74,14 +94,15 @@ header{
      -webkit-transform: translate(-50%, -50%);
      transform: translate(-50%, -50%);
 }
-
-h1{
-    color:rgb(253, 232, 7);
-    text-shadow: 0 0 1px;
-    margin-bottom: 30px ;
+.call h1{
+        color: #fff;
+        text-shadow: 0 0 1px;
+        margin-bottom: 30px ;
+        font-family: 'Oswald', sans-serif;
+        font-size: 46px;
 }
 .call p{
-    font-size: 20px;
+    font-size: 14px;
     margin-bottom: 30px ;
 }
 .call a{
@@ -95,50 +116,91 @@ h1{
     background-color: #222;
     border: 2px solid #fff
 }
-h2{
-    
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+h2{ 
+    background-color: #333;
     text-align: center;
-    text-transform: uppercase;
-    padding: 15px;
-}
-.sec{
-    height: 700px;
-    width: 100%;
-    background-color: rgb(255, 255, 255);
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: auto;
-    grid-template-areas:"despop despop prom"
-                        "rev rev prom";
-    grid-gap: 20px;
-    padding: 20px;
-                            
+    font-family: 'Oswald', sans-serif;
+    color: #fff;
+    text-shadow: 0 0 5px #333;
+    font-size: 27px;
+    padding: 10px;
 }
 
-.item{   
+h3{
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    color: #fff;
+    background-color: #222;
+    grid-column: 1/3;
+    grid-row: 1/2;
+    padding: 10px;
+    font-size: 27px;
+}
+.despop{
     background-color: #fff;
-    border:#222 2px solid;
-    border-radius: 8px;
+    height: auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(5,120px);
+    grid-gap: 20px;
+    padding: 10px;
 }
-#item1{
-    grid-area: despop;
-   
-   
-}
-#item2{
-    grid-area: rev;
+.resort{
+    height: auto;
+    width: 100%;
+    border: 1px solid rgb(15, 15, 15); 
+    background-color: #fff;
+    grid-gap: 20px;
+    transition: transform 0.7s;
     
 }
-#item3{
-    grid-area: rev;
+.resort:hover{
+    transform: scale(1.2);
+    
 }
-#item4{
-    grid-area: prom;
+.resort1{
+    background-image: url(img/aspen.png);
+    background-size: cover;
+    background-position: center;
+    grid-column: 1/2;
+    grid-row: 2/3;
 }
-
-
-
+.resort2{
+    background-image: url(img/breckenridge.png);
+    background-size: cover;
+    background-position: center;
+}
+.resort3{
+    background-image: url(img/beavercreek.png);
+    background-size: cover;
+    background-position: center;
+}
+.resort4{
+    background-image: url(img/vail.png);
+    background-size: cover;
+    background-position: center;
+}
+.resort5{
+    background-image: url(img/deer\ valley.png);
+    background-size: cover;
+    background-position: center;
+}
+.resort6{
+    background-image: url(img/jackson-hole-logo-png-transparent.png);
+    background-size: cover;
+    background-position: center;
+}
+.resort7{
+    background-image: url(img/parkcity.png);
+    background-size: cover;
+    background-position: center;
+}
+.resort8{
+    background-image: url(img/aspen.png);
+    background-size: cover;
+    background-position: center;
+}
 
 
 footer{
@@ -189,8 +251,43 @@ footer{
     background-color: #222;
     padding: 20px;
     border: groove 3px #fff;  
-    margin-left: 200px;
     text-align: left;
-    width: 60%;
-    align-content: space-around;
+    width: auto;
+    align-content: center;
+}
+@media only screen and (min-width:768px){
+    .call{
+        width: 60%;
+        height: auto;
+        float: right;
+        margin: 120px;
+        padding: 20px;
+}
+    .call h1{
+        font-size: 56px;
+    }
+    .call p{
+        font-size: 14px;
+    }
+    .call a{
+        font-size: 26px;
+    }
+    .despop{
+        grid-template-columns: 1fr 1fr ;
+        grid-template-rows:repeat(4, 120px) ;
+        position: relative;
+
+    }
+    footer{
+        font-size: 12px;
+    }
+}
+@media only screen and (min-width:1024px){
+    .despop{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows:repeat(2, 240px) ;
+        position: relative;
+
+    }
+    
 }
